@@ -8,6 +8,37 @@
         <variable constant="1" name="DIR_LEFT" sid="9372774004759407" static="0" type="number">180</variable>
         <variable constant="1" name="DIR_UP" sid="2871715229268931" static="0" type="number">270</variable>
         <variable constant="1" name="NEUTRAL" sid="824360707528128" static="0" type="number">-1</variable>
+        <event-block sid="609717537884507">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="530983577516692" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="350203377592015" type="Creep">
+                    <param id="0" name="Obstacle">NotSoSolidBlock</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="600531933276313" type="Creep">
+                    <param id="0" name="Obstacle">SolidBlock</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="492762225035527" type="Creep">
+                    <param id="0" name="Obstacle">Bomb</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="212335015362525">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="572016554566744" type="System">
+                            <param id="0" name="Object">Creep</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="622272377707344" type="Function">
+                            <param id="0" name="Name">&quot;CreepPickDestination&quot;</param>
+                            <param id="1" name="Parameter {n}">Creep.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="868028537240400">
             <conditions>
                 <condition id="-1" name="Every tick" sid="928767099140729" type="System" />
@@ -749,6 +780,45 @@
                             <conditions />
                             <actions>
                                 <action id="-9" name="Destroy" sid="619225600108204" type="PowerUp" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="245997995245721" title="Creeps">
+            <sub-events>
+                <event-block sid="157384345191433">
+                    <conditions>
+                        <condition id="0" name="On function" sid="662476972510637" type="Function">
+                            <param id="0" name="Name">&quot;CreepPickDestination&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="360140790935507">
+                            <conditions>
+                                <condition id="-16" name="Pick random instance" sid="193368973519938" type="System">
+                                    <param id="0" name="Object">Destination</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="159093654421709" type="Creep">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="710391551378894" type="Creep" />
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="903211518364336" type="Creep">
+                                    <param id="0" name="X">Destination.X</param>
+                                    <param id="1" name="Y">Destination.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="101506165880442" type="Creep">
+                                    <param id="0" name="Instance variable">CurrentDestX</param>
+                                    <param id="1" name="Value">Destination.X</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="140301067065012" type="Creep">
+                                    <param id="0" name="Instance variable">CurrentDestY</param>
+                                    <param id="1" name="Value">Destination.Y</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
