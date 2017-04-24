@@ -81,6 +81,9 @@
                 <behavior-type name="Solid" sid="1982203983677557">
                     <behavior id="solid" />
                 </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="143725110494569">
+                    <behavior id="destroy" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9567761990985091" speed="5">
@@ -479,216 +482,216 @@
                 <animation framecount="6" loop="1" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="100797786066801" speed="6">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="\\Dbgadc1\programmers\SecondoProgettoConstruct\0_CommonAssets\Sprites\Creep\Back\Creep_B_f00.png">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="\\Dbgadc1\programmers\SecondoProgettoConstruct\0_CommonAssets\Sprites\Creep\Back\Creep_B_f01.png">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="\\Dbgadc1\programmers\SecondoProgettoConstruct\0_CommonAssets\Sprites\Creep\Back\Creep_B_f02.png">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="\\Dbgadc1\programmers\SecondoProgettoConstruct\0_CommonAssets\Sprites\Creep\Back\Creep_B_f03.png">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="\\Dbgadc1\programmers\SecondoProgettoConstruct\0_CommonAssets\Sprites\Creep\Back\Creep_B_f04.png">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="\\Dbgadc1\programmers\SecondoProgettoConstruct\0_CommonAssets\Sprites\Creep\Back\Creep_B_f05.png">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="6" loop="1" name="Front" pingpong="0" repeatcount="1" repeatto="0" sid="119607829522606" speed="6">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="\\Dbgadc1\programmers\SecondoProgettoConstruct\0_CommonAssets\Sprites\Creep\Front\Creep_F_f00.png">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="\\Dbgadc1\programmers\SecondoProgettoConstruct\0_CommonAssets\Sprites\Creep\Front\Creep_F_f01.png">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="\\Dbgadc1\programmers\SecondoProgettoConstruct\0_CommonAssets\Sprites\Creep\Front\Creep_F_f02.png">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="\\Dbgadc1\programmers\SecondoProgettoConstruct\0_CommonAssets\Sprites\Creep\Front\Creep_F_f03.png">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="\\Dbgadc1\programmers\SecondoProgettoConstruct\0_CommonAssets\Sprites\Creep\Front\Creep_F_f04.png">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="\\Dbgadc1\programmers\SecondoProgettoConstruct\0_CommonAssets\Sprites\Creep\Front\Creep_F_f05.png">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="7" loop="1" name="Right" pingpong="0" repeatcount="1" repeatto="0" sid="195040526030139" speed="7">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="\\Dbgadc1\programmers\SecondoProgettoConstruct\0_CommonAssets\Sprites\Creep\Side\Creep_S_f00.png">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="\\Dbgadc1\programmers\SecondoProgettoConstruct\0_CommonAssets\Sprites\Creep\Side\Creep_S_f01.png">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="\\Dbgadc1\programmers\SecondoProgettoConstruct\0_CommonAssets\Sprites\Creep\Side\Creep_S_f02.png">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="\\Dbgadc1\programmers\SecondoProgettoConstruct\0_CommonAssets\Sprites\Creep\Side\Creep_S_f03.png">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="\\Dbgadc1\programmers\SecondoProgettoConstruct\0_CommonAssets\Sprites\Creep\Side\Creep_S_f04.png">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="\\Dbgadc1\programmers\SecondoProgettoConstruct\0_CommonAssets\Sprites\Creep\Side\Creep_S_f05.png">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="\\Dbgadc1\programmers\SecondoProgettoConstruct\0_CommonAssets\Sprites\Creep\Side\Creep_S_f06.png">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="7" loop="1" name="Left" pingpong="0" repeatcount="1" repeatto="0" sid="617912998421579" speed="7">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.890625" y="0.125" />
+                            <point x="0.890625" y="0.875" />
+                            <point x="0.125" y="0.875" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -771,6 +774,9 @@
                 <behavior-type name="Rotate" sid="563316702411239">
                     <behavior id="Rotate" />
                 </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="422511713868347">
+                    <behavior id="destroy" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="681349559151780" speed="5">
@@ -791,6 +797,17 @@
         </object-type>
         <object-type global="1" name="Array" sid="942163644445097">
             <plugin id="Arr" />
+        </object-type>
+        <object-type name="ResetText" sid="143172495171492">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="GridSprite" sid="957534012384010">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="499768454793749" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
