@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ESMenu</name>
+    <events>
+        <variable constant="0" name="Winner" sid="974596617596964" static="0" type="number">-1</variable>
+        <event-block sid="608943059611887">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="339283454256500" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set web font" sid="231915965600261" type="txtDescription">
+                    <param id="0" name="Family name">&quot;Anton&quot;</param>
+                    <param id="1" name="CSS URL">&quot;http://fonts.googleapis.com/css?family=Anton&quot;</param>
+                </action>
+                <action id="2" name="Set font face" sid="590973749619306" type="txtDescription">
+                    <param id="0" name="Font face">&quot;Anton&quot;</param>
+                    <param id="1" name="Style">0</param>
+                </action>
+                <action id="5" name="Set web font" sid="178510928312956" type="ControlsPlayerOne">
+                    <param id="0" name="Family name">&quot;Anton&quot;</param>
+                    <param id="1" name="CSS URL">&quot;http://fonts.googleapis.com/css?family=Anton&quot;</param>
+                </action>
+                <action id="2" name="Set font face" sid="413964067852522" type="ControlsPlayerOne">
+                    <param id="0" name="Font face">&quot;Anton&quot;</param>
+                    <param id="1" name="Style">0</param>
+                </action>
+                <action id="5" name="Set web font" sid="952996181293672" type="ControlsPlayerTwo">
+                    <param id="0" name="Family name">&quot;Anton&quot;</param>
+                    <param id="1" name="CSS URL">&quot;http://fonts.googleapis.com/css?family=Anton&quot;</param>
+                </action>
+                <action id="2" name="Set font face" sid="879713136841077" type="ControlsPlayerTwo">
+                    <param id="0" name="Font face">&quot;Anton&quot;</param>
+                    <param id="1" name="Style">0</param>
+                </action>
+                <action id="2" name="Set at X" sid="320185234944560" type="Array">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Value">&quot;One&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="561104260738620" type="Array">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Value">&quot;Two&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="738300308314560">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="550539598883998" type="System">
+                            <param id="0" name="Variable">Winner</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="526435763253488" type="txtDescription">
+                            <param id="0" name="Text">&quot;Choose the number of players&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="133232515194866">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="967998025147466" type="System">
+                            <param id="0" name="Variable">Winner</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="591761039185534" type="System">
+                            <param id="0" name="Variable">Winner</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="695993744369640" type="txtDescription">
+                            <param id="0" name="Text">&quot;Player&quot; &amp; Array.At(Winner) &amp; &quot; wins!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="308745433276502">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="112411861429175" type="System">
+                            <param id="0" name="Variable">Winner</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="631316674970923" type="txtDescription">
+                            <param id="0" name="Text">&quot;Game Over!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="267146062817152">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="355881340580494" type="System">
+                            <param id="0" name="Variable">Winner</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="539311991489176" type="txtDescription">
+                            <param id="0" name="Text">&quot;Try again!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="199273222376657">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="142317454417434" type="Mouse">
+                    <param id="0" name="Object">PlayerButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="962627626527836" type="PlayerButton">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="152510478990569">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="968666901588089" type="Mouse">
+                    <param id="0" name="Object">PlayerButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="115559070751347" type="PlayerButton">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="562981616033879">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="507813977798146" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">PlayerButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="728452725597699" type="System">
+                    <param id="0" name="Layout">Game</param>
+                </action>
+                <action id="-9" name="Set value" sid="289203205263584" type="System">
+                    <param id="0" name="Variable">Players</param>
+                    <param id="1" name="Value">PlayerButton.ID</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
