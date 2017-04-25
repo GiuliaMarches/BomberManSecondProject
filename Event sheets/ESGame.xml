@@ -14,13 +14,13 @@
                 <condition id="-2" name="On start of layout" sid="530983577516692" type="System" />
             </conditions>
             <actions>
-                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="350203377592015" type="Creep">
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="350203377592015" type="BeetleCreep">
                     <param id="0" name="Obstacle">NotSoSolidBlock</param>
                 </action>
-                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="600531933276313" type="Creep">
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="600531933276313" type="BeetleCreep">
                     <param id="0" name="Obstacle">SolidBlock</param>
                 </action>
-                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="492762225035527" type="Creep">
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="492762225035527" type="BeetleCreep">
                     <param id="0" name="Obstacle">Bomb</param>
                 </action>
                 <action id="-10" name="Set value" sid="633812621062439" type="BomberPlayer">
@@ -39,18 +39,24 @@
                     <param id="0" name="Font face">&quot;Anton&quot;</param>
                     <param id="1" name="Style">0</param>
                 </action>
+                <action id="0" name="Play" sid="143253947702079" type="Audio">
+                    <param id="0" name="Audio file">game music</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="212335015362525">
                     <conditions>
                         <condition id="-11" name="For Each" sid="572016554566744" type="System">
-                            <param id="0" name="Object">Creep</param>
+                            <param id="0" name="Object">BeetleCreep</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="622272377707344" type="Function">
                             <param id="0" name="Name">&quot;CreepPickDestination&quot;</param>
-                            <param id="1" name="Parameter {n}">Creep.UID</param>
+                            <param id="1" name="Parameter {n}">BeetleCreep.UID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -293,7 +299,7 @@
                         <event-block sid="2755683186264657">
                             <conditions>
                                 <condition id="2" name="Key is down" sid="8805784006422537" type="Keyboard">
-                                    <param id="0" name="Key">76 (L)</param>
+                                    <param id="0" name="Key">39 (Right arrow)</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -310,7 +316,7 @@
                         <event-block sid="8728175427686314">
                             <conditions>
                                 <condition id="2" name="Key is down" sid="9860025612450269" type="Keyboard">
-                                    <param id="0" name="Key">74 (J)</param>
+                                    <param id="0" name="Key">37 (Left arrow)</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -327,7 +333,7 @@
                         <event-block sid="5796552057381123">
                             <conditions>
                                 <condition id="2" name="Key is down" sid="6400848232467546" type="Keyboard">
-                                    <param id="0" name="Key">73 (I)</param>
+                                    <param id="0" name="Key">38 (Up arrow)</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -344,7 +350,7 @@
                         <event-block sid="4493509984800224">
                             <conditions>
                                 <condition id="2" name="Key is down" sid="3459604170512497" type="Keyboard">
-                                    <param id="0" name="Key">75 (K)</param>
+                                    <param id="0" name="Key">40 (Down arrow)</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -713,6 +719,12 @@
                             <conditions />
                             <actions>
                                 <action id="-9" name="Destroy" sid="861113548274842" type="Bomb" />
+                                <action id="0" name="Play" sid="223866322066792" type="Audio">
+                                    <param id="0" name="Audio file">Bomb-SoundBible.com-891110113</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -804,16 +816,6 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="483704386076813" type="BomberPlayer" />
-                    </actions>
-                </event-block>
-                <event-block sid="302831693223474">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="879818477135179" type="Explosion">
-                            <param id="0" name="Object">Creep</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="442053029670190" type="Creep" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -1027,24 +1029,24 @@
                                 <condition id="-16" name="Pick random instance" sid="193368973519938" type="System">
                                     <param id="0" name="Object">Destination</param>
                                 </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="159093654421709" type="Creep">
+                                <condition id="-14" name="Pick by unique ID" sid="159093654421709" type="BeetleCreep">
                                     <param id="0" name="Unique ID">Function.Param(0)</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="710391551378894" type="Creep" />
+                                <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="710391551378894" type="BeetleCreep" />
                                 <action id="-16" name="Wait" sid="291469318130635" type="System">
                                     <param id="0" name="Seconds">0</param>
                                 </action>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="903211518364336" type="Creep">
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="903211518364336" type="BeetleCreep">
                                     <param id="0" name="X">Destination.X</param>
                                     <param id="1" name="Y">Destination.Y</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="101506165880442" type="Creep">
+                                <action id="-10" name="Set value" sid="101506165880442" type="BeetleCreep">
                                     <param id="0" name="Instance variable">CurrentDestX</param>
                                     <param id="1" name="Value">Destination.X</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="140301067065012" type="Creep">
+                                <action id="-10" name="Set value" sid="140301067065012" type="BeetleCreep">
                                     <param id="0" name="Instance variable">CurrentDestY</param>
                                     <param id="1" name="Value">Destination.Y</param>
                                 </action>
@@ -1058,12 +1060,12 @@
                             <param id="0" name="Name">&quot;creepsRegenMap&quot;</param>
                         </condition>
                         <condition id="-11" name="For Each" sid="971091032968138" type="System">
-                            <param id="0" name="Object">Creep</param>
+                            <param id="0" name="Object">BeetleCreep</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="657242871031411" type="Creep" />
-                        <action behavior="Pathfinding" id="0" name="Find path" sid="789508776966108" type="Creep">
+                        <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="657242871031411" type="BeetleCreep" />
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="789508776966108" type="BeetleCreep">
                             <param id="0" name="X">Self.CurrentDestX</param>
                             <param id="1" name="Y">Self.CurrentDestY</param>
                         </action>
@@ -1071,39 +1073,39 @@
                 </event-block>
                 <event-block sid="572014438395549">
                     <conditions>
-                        <condition behavior="Pathfinding" id="0" name="On path found" sid="382196853282341" type="Creep" />
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="382196853282341" type="BeetleCreep" />
                     </conditions>
                     <actions>
-                        <action behavior="Pathfinding" id="1" name="Move along path" sid="954657159949012" type="Creep" />
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="954657159949012" type="BeetleCreep" />
                     </actions>
                 </event-block>
                 <event-block sid="328915050645665">
                     <conditions>
-                        <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="443427648172530" type="Creep" />
+                        <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="443427648172530" type="BeetleCreep" />
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="221990917110895" type="Function">
                             <param id="0" name="Name">&quot;CreepPickDestination&quot;</param>
-                            <param id="1" name="Parameter {n}">Creep.UID</param>
+                            <param id="1" name="Parameter {n}">BeetleCreep.UID</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="860680867457847">
                     <conditions>
-                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="522498444056064" type="Creep" />
+                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="522498444056064" type="BeetleCreep" />
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="832829160501019" type="Function">
                             <param id="0" name="Name">&quot;CreepPickDestination&quot;</param>
-                            <param id="1" name="Parameter {n}">Creep.UID</param>
+                            <param id="1" name="Parameter {n}">BeetleCreep.UID</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="797893511716280">
                     <conditions>
-                        <condition behavior="Pathfinding" id="4" name="Is moving along path" sid="437996879466203" type="Creep" />
+                        <condition behavior="Pathfinding" id="4" name="Is moving along path" sid="437996879466203" type="BeetleCreep" />
                         <condition id="-11" name="For Each" sid="744432865460936" type="System">
-                            <param id="0" name="Object">Creep</param>
+                            <param id="0" name="Object">BeetleCreep</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -1111,19 +1113,19 @@
                         <event-block sid="211648138401097">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="191061186897557" type="System">
-                                    <param id="0" name="First value">Creep.Pathfinding.MovingAngle</param>
+                                    <param id="0" name="First value">BeetleCreep.Pathfinding.MovingAngle</param>
                                     <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Second value">DIR_UP - 25</param>
                                 </condition>
                                 <condition id="-8" name="Compare two values" sid="808777394521228" type="System">
-                                    <param id="0" name="First value">Creep.Pathfinding.MovingAngle</param>
+                                    <param id="0" name="First value">BeetleCreep.Pathfinding.MovingAngle</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Second value">DIR_UP + 25</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="671963503504567" type="Creep">
-                                    <param id="0" name="Animation">&quot;Back&quot;</param>
+                                <action id="4" name="Set animation" sid="671963503504567" type="BeetleCreep">
+                                    <param id="0" name="Animation">&quot;BeetleBack&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
@@ -1131,19 +1133,19 @@
                         <event-block sid="368015567023861">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="196912619382497" type="System">
-                                    <param id="0" name="First value">Creep.Pathfinding.MovingAngle</param>
+                                    <param id="0" name="First value">BeetleCreep.Pathfinding.MovingAngle</param>
                                     <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Second value">DIR_DOWN - 25</param>
                                 </condition>
                                 <condition id="-8" name="Compare two values" sid="427693650319709" type="System">
-                                    <param id="0" name="First value">Creep.Pathfinding.MovingAngle</param>
+                                    <param id="0" name="First value">BeetleCreep.Pathfinding.MovingAngle</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Second value">DIR_DOWN + 25</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="396229076511086" type="Creep">
-                                    <param id="0" name="Animation">&quot;Front&quot;</param>
+                                <action id="4" name="Set animation" sid="396229076511086" type="BeetleCreep">
+                                    <param id="0" name="Animation">&quot;BeetleFront&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
@@ -1151,19 +1153,19 @@
                         <event-block sid="147852506823724">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="508127369054773" type="System">
-                                    <param id="0" name="First value">Creep.Pathfinding.MovingAngle</param>
+                                    <param id="0" name="First value">BeetleCreep.Pathfinding.MovingAngle</param>
                                     <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Second value">DIR_LEFT - 25</param>
                                 </condition>
                                 <condition id="-8" name="Compare two values" sid="229477566065918" type="System">
-                                    <param id="0" name="First value">Creep.Pathfinding.MovingAngle</param>
+                                    <param id="0" name="First value">BeetleCreep.Pathfinding.MovingAngle</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Second value">DIR_LEFT + 25</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="546631039093929" type="Creep">
-                                    <param id="0" name="Animation">&quot;Left&quot;</param>
+                                <action id="4" name="Set animation" sid="546631039093929" type="BeetleCreep">
+                                    <param id="0" name="Animation">&quot;BeetleLeft&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
@@ -1171,54 +1173,308 @@
                         <event-block sid="829011681404783">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="622084085152676" type="System">
-                                    <param id="0" name="First value">Creep.Pathfinding.MovingAngle</param>
+                                    <param id="0" name="First value">BeetleCreep.Pathfinding.MovingAngle</param>
                                     <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Second value">DIR_RIGHT - 25</param>
                                 </condition>
                                 <condition id="-8" name="Compare two values" sid="316043539342580" type="System">
-                                    <param id="0" name="First value">Creep.Pathfinding.MovingAngle</param>
+                                    <param id="0" name="First value">BeetleCreep.Pathfinding.MovingAngle</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Second value">DIR_RIGHT + 25</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="386392587859250" type="Creep">
-                                    <param id="0" name="Animation">&quot;Right&quot;</param>
+                                <action id="4" name="Set animation" sid="386392587859250" type="BeetleCreep">
+                                    <param id="0" name="Animation">&quot;BeetleRight&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="597053707268534">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="568387329595906" type="BeetleCreep">
+                            <param id="0" name="Object">PowerUp</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="950620924456326" type="PowerUp" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="120546134167004" title="EndGameConditions">
             <sub-events>
-                <event-block sid="683024574371901">
+                <variable constant="0" name="CounterX" sid="647919849353319" static="0" type="number">1</variable>
+                <variable constant="0" name="CounterY" sid="552492195321133" static="0" type="number">1</variable>
+                <variable constant="0" name="PortalX" sid="724393222807312" static="0" type="number">64</variable>
+                <variable constant="0" name="PortalY" sid="397362752954126" static="0" type="number">64</variable>
+                <event-block sid="705829082691092">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="656914007716075" type="System">
+                        <condition id="-8" name="Compare two values" sid="603368722524310" type="System">
                             <param id="0" name="First value">NotSoSolidBlock.Count</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-15" name="Set visible" sid="942691654917666" type="Portal">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="374949354430616" type="System">
+                            <param id="0" name="Variable">CounterX</param>
+                            <param id="1" name="Value">int(random(8))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="305313054615476" type="System">
+                            <param id="0" name="Variable">CounterY</param>
+                            <param id="1" name="Value">int(random(8))</param>
+                        </action>
+                    </actions>
                     <sub-events>
-                        <event-block sid="688402870015208">
+                        <event-block sid="298803079591966">
                             <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="269821974383648" type="System" />
+                                <condition id="-4" name="Trigger once while true" sid="781599194053282" type="System" />
+                                <condition id="-14" name="Compare variable" sid="261554927453333" type="System">
+                                    <param id="0" name="Variable">CounterX</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Create object" sid="252734296045276" type="System">
-                                    <param id="0" name="Object to create">Portal</param>
-                                    <param id="1" name="Layer">2</param>
-                                    <param id="2" name="X">random(GridSprite.X) + 64</param>
-                                    <param id="3" name="Y">random(GridSprite.Y) + 64</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="635023683283139" type="Portal">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="-1" name="Set X" sid="889461498561895" type="Portal">
+                                    <param id="0" name="X">96</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block sid="137435025095320">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="360738730833748" type="System" />
+                                <condition id="-14" name="Compare variable" sid="251401799554542" type="System">
+                                    <param id="0" name="Variable">CounterX</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="335402882618399" type="Portal">
+                                    <param id="0" name="X">160</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="851292835552866">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="719962222263580" type="System" />
+                                <condition id="-14" name="Compare variable" sid="821453815112587" type="System">
+                                    <param id="0" name="Variable">CounterX</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="357460275356427" type="Portal">
+                                    <param id="0" name="X">224</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="923325283736055">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="463793310099278" type="System" />
+                                <condition id="-14" name="Compare variable" sid="777511849126483" type="System">
+                                    <param id="0" name="Variable">CounterX</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="367405765005969" type="Portal">
+                                    <param id="0" name="X">288</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="152619891789744">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="231031298337344" type="System" />
+                                <condition id="-14" name="Compare variable" sid="723954510037877" type="System">
+                                    <param id="0" name="Variable">CounterX</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="416288293839396" type="Portal">
+                                    <param id="0" name="X">352</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="931314049346190">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="120561011497319" type="System" />
+                                <condition id="-14" name="Compare variable" sid="445439946425732" type="System">
+                                    <param id="0" name="Variable">CounterX</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="639658736098222" type="Portal">
+                                    <param id="0" name="X">416</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="797114480146808">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="119363047954148" type="System" />
+                                <condition id="-14" name="Compare variable" sid="821238849501634" type="System">
+                                    <param id="0" name="Variable">CounterX</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="854072469495750" type="Portal">
+                                    <param id="0" name="X">480</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="960530836989763">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="149408925808569" type="System" />
+                                <condition id="-14" name="Compare variable" sid="912150609142338" type="System">
+                                    <param id="0" name="Variable">CounterX</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="849539604855559" type="Portal">
+                                    <param id="0" name="X">544</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="914356679409418">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="994549071579122" type="System" />
+                                <condition id="-14" name="Compare variable" sid="633567536265238" type="System">
+                                    <param id="0" name="Variable">CounterY</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="600040154880323" type="Portal">
+                                    <param id="0" name="Y">96</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="748226175932837">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="748974777249045" type="System" />
+                                <condition id="-14" name="Compare variable" sid="576232684839914" type="System">
+                                    <param id="0" name="Variable">CounterY</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="879297095679468" type="Portal">
+                                    <param id="0" name="Y">160</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="852527253875638">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="347761222413449" type="System" />
+                                <condition id="-14" name="Compare variable" sid="303301619841173" type="System">
+                                    <param id="0" name="Variable">CounterY</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="537715844561031" type="Portal">
+                                    <param id="0" name="Y">224</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="495016089830810">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="525790875007718" type="System" />
+                                <condition id="-14" name="Compare variable" sid="896759424229131" type="System">
+                                    <param id="0" name="Variable">CounterY</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="270698815540493" type="Portal">
+                                    <param id="0" name="Y">288</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="584543032030642">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="185204525698349" type="System" />
+                                <condition id="-14" name="Compare variable" sid="390912958803132" type="System">
+                                    <param id="0" name="Variable">CounterY</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="862985074708695" type="Portal">
+                                    <param id="0" name="Y">352</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="392132005634120">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="376765789751779" type="System" />
+                                <condition id="-14" name="Compare variable" sid="278031313422874" type="System">
+                                    <param id="0" name="Variable">CounterY</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="501206430601066" type="Portal">
+                                    <param id="0" name="Y">416</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="855226932546565">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="441044843886524" type="System" />
+                                <condition id="-14" name="Compare variable" sid="664411494219411" type="System">
+                                    <param id="0" name="Variable">CounterY</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="798286831336964" type="Portal">
+                                    <param id="0" name="Y">480</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="333722467509337">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="930664323345508" type="System" />
+                                <condition id="-14" name="Compare variable" sid="541112154049325" type="System">
+                                    <param id="0" name="Variable">CounterY</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="442891701145390" type="Portal">
+                                    <param id="0" name="Y">544</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="534096354058309">
+                            <conditions />
+                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -1278,7 +1534,7 @@
         <event-block sid="876831519568310">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="808832701120040" type="BomberPlayer">
-                    <param id="0" name="Object">Creep</param>
+                    <param id="0" name="Object">BeetleCreep</param>
                 </condition>
             </conditions>
             <actions>

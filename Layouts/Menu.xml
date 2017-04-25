@@ -51,6 +51,82 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Title" uid="122">
+                    <properties>
+                        <text>BeetleFront</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Haettenschweiler,-96,400,0</font>
+                        <color>204,153,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>15</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine2">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>12</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>20</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine3">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>25</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>10</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="Noise">
+                            <parameters>
+                                <color>1</color>
+                                <intensity>0.4</intensity>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>95.5</x>
+                        <y>113</y>
+                        <z>0</z>
+                        <width>489</width>
+                        <height>133</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -70,69 +146,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Title" uid="111">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Sine">
-                            <properties>
-                                <active-on-start>Yes</active-on-start>
-                                <movement>Horizontal</movement>
-                                <wave>Sine</wave>
-                                <period>4</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>15</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Sine2">
-                            <properties>
-                                <active-on-start>Yes</active-on-start>
-                                <movement>Vertical</movement>
-                                <wave>Sine</wave>
-                                <period>12</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>20</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Sine3">
-                            <properties>
-                                <active-on-start>Yes</active-on-start>
-                                <movement>Angle</movement>
-                                <wave>Sine</wave>
-                                <period>25</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>10</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>326</x>
-                        <y>283</y>
-                        <z>0</z>
-                        <width>389</width>
-                        <height>162</height>
-                        <depth>0</depth>
-                        <hotspotX>0.467866331</hotspotX>
-                        <hotspotY>1.154320955</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="PlayerButton" uid="112">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -188,7 +201,7 @@
                         <text>WASD + [SPACE]</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Georgia,-21,700,0</font>
-                        <color>255,204,0</color>
+                        <color>204,153,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -212,10 +225,10 @@
                 </instance>
                 <instance type="ControlsPlayerTwo" uid="115">
                     <properties>
-                        <text>IJKL + [ALT]</text>
+                        <text>Arrows + [ALT]</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Georgia,-21,700,0</font>
-                        <color>255,204,0</color>
+                        <color>204,153,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -225,11 +238,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>427</x>
+                        <x>417</x>
                         <y>367</y>
                         <z>0</z>
-                        <width>166</width>
-                        <height>39</height>
+                        <width>186</width>
+                        <height>37</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -242,7 +255,7 @@
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-21,700,1</font>
-                        <color>255,204,0</color>
+                        <color>204,153,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>

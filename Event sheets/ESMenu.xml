@@ -74,6 +74,12 @@
                         <action id="0" name="Set text" sid="695993744369640" type="txtDescription">
                             <param id="0" name="Text">&quot;Player&quot; &amp; Array.At(Winner) &amp; &quot; wins!&quot;</param>
                         </action>
+                        <action id="0" name="Play" sid="881068391976450" type="Audio">
+                            <param id="0" name="Audio file">TaDaSound</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="308745433276502">
