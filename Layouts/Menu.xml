@@ -201,7 +201,7 @@
                         <text>WASD + [SPACE]</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Georgia,-21,700,0</font>
-                        <color>204,153,0</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -228,7 +228,7 @@
                         <text>Arrows + [ALT]</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Georgia,-21,700,0</font>
-                        <color>204,153,0</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -255,7 +255,7 @@
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-21,700,1</font>
-                        <color>204,153,0</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>

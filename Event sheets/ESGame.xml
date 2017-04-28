@@ -767,20 +767,6 @@
         </event-group>
         <event-group description="" sid="237444474282147" title="Explosions">
             <sub-events>
-                <event-block sid="887513069429660">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="378314658041119" type="Explosion">
-                            <param id="0" name="Object">PowerUp</param>
-                        </condition>
-                        <condition id="-10" name="Compare opacity" sid="705515215275603" type="Explosion">
-                            <param id="0" name="Comparison">5</param>
-                            <param id="1" name="Opacity">80</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="106523824813884" type="PowerUp" />
-                    </actions>
-                </event-block>
                 <event-block sid="817693948815533">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="830158990747001" type="Explosion">
@@ -1537,16 +1523,33 @@
                     <param id="0" name="Object">BeetleCreep</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="707347166361505" type="BomberPlayer" />
-                <action id="-9" name="Set value" sid="649064542992807" type="System">
-                    <param id="0" name="Variable">Winner</param>
-                    <param id="1" name="Value">2</param>
-                </action>
-                <action id="-2" name="Go to layout" sid="714534247533191" type="System">
-                    <param id="0" name="Layout">Menu</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="798584497601112">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="878692413909101" type="BomberPlayer">
+                            <param id="0" name="Instance variable">Player</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="391280713991992" type="BomberPlayer" />
+                    </actions>
+                </event-block>
+                <event-block sid="950333632197578">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="658955351838350" type="BomberPlayer">
+                            <param id="0" name="Instance variable">Player</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="514802721556966" type="BomberPlayer" />
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
